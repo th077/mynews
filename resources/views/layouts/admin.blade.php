@@ -14,7 +14,8 @@
         
         <!-- Scripts -->
          {{-- Laravel標準で用意されているJavascriptを読み込みます --}}
-        <script scr="{{ secure_asset('js/app.js') }}" defer></script>
+        {{-- src が scr にスペルミス --}}
+        <script src="{{ secure_asset('js/app.js') }}" defer></script>
         
         <!-- Fonts -->
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -27,9 +28,11 @@
         <link href="{{ secure_asset('css/admin.css') }}" rel="stylesheet">
     </head>
     <body>
-        <dev id="app">
+        {{-- div が dev にスペルミス --}}
+        <div id="app">
             {{-- 画面上部に表示するナビゲーションバーです。 --}}
-            <nav class="navbar navbar-expand-md navbar-dark navbar-lravel">
+            {{-- navbar-laravel が navbar-lravel にスペルミス --}}
+            <nav class="navbar navbar-expand-md navbar-dark navbar-laravel">
                 <div class="container">
                     <a class="navbar-brand" href="{{ url('/') }}">
                         {{ config('app.name', 'Laravel') }}
@@ -90,6 +93,6 @@
             </main>
         </div>
     </body>
-        </dev>
+        </div>
     </body>
 </html>
