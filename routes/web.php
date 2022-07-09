@@ -18,7 +18,8 @@ Route::get('/', function () {
 Route::group(['prefix' => 'admin'], function(){
     // news
     Route::get('news/create','Admin\NewsController@add')->middleware('auth');
-    Route::post('news/create', 'Admin\NewsController@create');
+    Route::post('news/create', 'Admin\NewsController@create')->middleware('auth');
+    Route::get('news', 'Admin\NewsController@index')->middleware('auth');
     
     // profile
     // admin/profile/create にアクセスしたら ProfileController の add Action
