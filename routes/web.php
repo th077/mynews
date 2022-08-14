@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+Route::get('/', 'NewsController@index');
 
 Route::group(['prefix' => 'admin'], function(){
     // news
